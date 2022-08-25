@@ -1,0 +1,38 @@
+@import "../scss/resets";
+@import "../scss/variables";
+@import "../scss/fonts";
+@import "../scss/flexItem";
+
+.cardAddedWrapper {
+  // background-color: aqua;
+  @include flexItem(column, space-evenly, 0);
+  justify-content: center;
+  align-items: center;
+
+  .cardAddedBlock {
+    @include flexItem(column, space-evenly, 0);
+    gap: 0.5em;
+    text-align: center;
+    margin: 1em;
+    // background-color: aquamarine;
+  }
+
+  .cardAddedHead {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    color: $Very-dark-violet;
+  }
+
+  .cardAddedText {
+    color: $Dark-grayish-violet;
+  }
+
+  button {
+    width: 320px;
+    background-color: $Very-dark-violet;
+    color: $white;
+    padding: 1em;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}

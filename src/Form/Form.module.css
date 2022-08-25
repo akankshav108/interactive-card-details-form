@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.formWapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+.formWapper .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 0 auto;
+}
+.formWapper .inputWapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+.formWapper .inputWapper:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0;
+}
+.formWapper input {
+  width: 320px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  cursor: pointer;
+  color: hsl(278deg, 68%, 11%);
+  padding: 10px;
+}
+.formWapper input:focus {
+  outline: none;
+  border-color: hsl(278deg, 68%, 11%);
+  font-weight: 600;
+}
+.formWapper ::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  opacity: 1; /* Firefox */
+  font-family: "Space Grotesk", sans-serif;
+}
+.formWapper :-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  opacity: 1; /* Firefox */
+  font-family: "Space Grotesk", sans-serif;
+}
+.formWapper ::placeholder {
+  color: hsl(270deg, 3%, 87%);
+  opacity: 1; /* Firefox */
+  font-family: "Space Grotesk", sans-serif;
+}
+.formWapper :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: hsl(270deg, 3%, 87%);
+  font-family: "Space Grotesk", sans-serif;
+}
+.formWapper ::-ms-input-placeholder { /* Microsoft Edge */
+  color: hsl(270deg, 3%, 87%);
+  font-family: "Space Grotesk", sans-serif;
+}
+.formWapper label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: hsl(278deg, 68%, 11%);
+}
+.formWapper .expInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.formWapper .expInput input {
+  width: 70px;
+}
+.formWapper .expInput div {
+  display: flex;
+  gap: 10px;
+}
+.formWapper .cvcInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.formWapper .cvcInput input {
+  width: 150px;
+}
+.formWapper .inputWarning {
+  color: hsl(0deg, 100%, 66%);
+  font-size: 12px;
+}
+.formWapper button {
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 1em;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.formWapper .red {
+  border-color: hsl(0deg, 100%, 66%);
+}/*# sourceMappingURL=Form.module.css.map */

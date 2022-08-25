@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cardAddedWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+.cardAddedWrapper .cardBlock {
+  text-align: center;
+}
+.cardAddedWrapper .cardHead {
+  font-size: 20px;
+}/*# sourceMappingURL=CardAddedConfirm.module.css.map */

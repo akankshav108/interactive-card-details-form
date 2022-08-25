@@ -1,0 +1,105 @@
+@import "../scss/resets";
+@import "../scss/variables";
+@import "../scss/fonts";
+@import "../scss/flexItem";
+
+.formWapper {
+  @include flexItem(column, space-evenly, 0);
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    @include flexItem(column, space-evenly, 20px);
+    margin: 0 auto;
+  }
+
+  .inputWapper {
+    // background-color: rgb(162, 162, 162);
+    @include flexItem(column, space-evenly, 5px);
+  }
+
+  .inputWapper:nth-child(3){
+    @include flexItem(row, space-between, 0);
+    // background-color: aqua;
+  }
+
+  input {
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid $Light-grayish-violet;
+    cursor: pointer;
+    color: $Very-dark-violet;
+    padding: 10px;
+    
+  }
+
+  input:focus{
+    outline: none;
+    border-color: $Very-dark-violet;
+    font-weight: 600;
+  }
+
+  ::placeholder {
+    color: $Light-grayish-violet;
+    opacity: 1; /* Firefox */
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $Light-grayish-violet;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $Light-grayish-violet;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: $Very-dark-violet;
+  }
+
+ 
+
+  .expInput {
+    @include flexItem(column, flex-end, 5px);
+    input {
+      width: 70px;
+    }
+
+    div{
+        display: flex;
+        gap: 10px;
+    }
+  }
+
+  .cvcInput {
+    @include flexItem(column, flex-end, 5px);
+    // background-color: antiquewhite;
+    input {
+      width: 150px;
+    }
+  }
+
+  .inputWarning{
+    color: $Red;
+    font-size: 12px ;
+  }
+
+  button{
+    background-color: $Very-dark-violet;
+    color: $white;
+    padding: 1em;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+
+  .red{
+    border-color: $Red;
+  }
+}

@@ -1,10 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "./scss/resets";
+@import "./scss/variables";
 
 body {
   background-image: url("./images/bg-main-desktop.png");
   background-repeat: no-repeat;
-}/*# sourceMappingURL=index.css.map */
+}
