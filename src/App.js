@@ -6,21 +6,22 @@ import CardAddedConfirm from "./Form/CardAddedConfirm";
 
 function App() {
   const [cardData, setCardData] = useState({});
-  // const [warning, setWarning] = useState({});
-  const onAddCardHandler = (cardValues) => {
+  const [isValid, setIsValid] = useState(true)
+
+
+  const onAddCardHandler = (cardValues, valid) => {
     setCardData(cardValues);
-    console.log(cardValues)
+    setIsValid(valid);
   };
 
-  
+  const onContinueHandler = (valid) =>{
+    setIsValid(valid);
+  }
 
   return (
     <main className={Styles.main}>
       <Card cardData={cardData} />
-      <Form onAddCard={onAddCardHandler} /> 
-      {/* <CardAddedConfirm />
-
-      {/* {isValidDetail? <Form onAddCard={onAddCardHandler}/> :  <CardAddedConfirm />} */}
+      {isValid? <Form onAddCard={onAddCardHandler}/> :  <CardAddedConfirm onContinue ={onContinueHandler}/>}
     </main>
   );
 }

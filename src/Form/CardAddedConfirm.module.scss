@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
 
+
   .cardAddedBlock {
     @include flexItem(column, space-evenly, 0);
     gap: 0.5em;
@@ -35,4 +36,9 @@
     border-radius: 7px;
     cursor: pointer;
   }
+
+
+  // @include mobile {
+    
+  // }
 }

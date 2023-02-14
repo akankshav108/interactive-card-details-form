@@ -2,89 +2,154 @@
 @import "../scss/variables";
 @import "../scss/fonts";
 @import "../scss/flexItem";
+@import "../scss/responsive";
 
 .cardsWarapper {
-  @include flexItem(column,space-evenly,2em);
+  @include flexItem(column, space-evenly, 2em);
   font-size: 18px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  
-
-  & > div {
-    width: 100%;
-    min-width:447px;
-  }
-
-  & > div:nth-child(2) {
-    display: flex;
-    justify-content:flex-end;
-  }
 
 
-  .cardWrapper {
-    position: relative;
-    width: 447px;
+  .cardFront {
+    order: 1;
 
-    .cardDetailsWrapper {
-      position: absolute;
-      @include flexItem(column, space-between,none);
-      top: 0;
-      width: 100%;
-      height: 100%;
+    .cardWrapper {
+      position: relative;
+      float: left;
 
-      & > div {
+      .cardDetailsWrapper {
+        position: absolute;
+        @include flexItem(column, space-between, none);
+        top: 0;
         width: 100%;
-        padding: 1.5em;
-      }
-
-      .cardLogo{
-        flex: 1;
-        padding: 1.5em;
-      }
-
-      .cardDetails{
-        @include flexItem(column,space-between,none);
-        flex: 2;
-        color: $white;
+        height: 100%;
 
         & > div {
           width: 100%;
+          padding: 1.5em;
         }
-      }
 
-      .cardNumber{
-        font-size: 2rem;
-
-        h1{
-          all: unset;
+        .cardLogo {
+          flex: 1;
+          padding: 1.5em;
         }
-      }
 
-      .cardBottom{
-        @include flexItem(row,space-between,none);
-        font-weight: 300;
-        font-size: 0.9rem;
-      }
+        .cardDetails {
+          @include flexItem(column, space-between, none);
+          flex: 2;
+          color: $white;
 
-      .cardExDate{
-        text-align: right;
+          & > div {
+            width: 100%;
+          }
+        }
+
+        .cardNumber {
+          font-size: 2rem;
+
+          h1 {
+            all: unset;
+          }
+        }
+
+        .cardBottom {
+          @include flexItem(row, space-between, none);
+          font-weight: 300;
+          font-size: 0.9rem;
+        }
+
+        .cardExDate {
+          text-align: right;
+        }
       }
     }
 
-   
+    @include mobile {
+      order: 2;
+      width: 100%;
+      position: absolute;
+      top: 87px;
+      padding: 20px;
+      margin-bottom: 20em;
+
+      .cardWrapper {
+        z-index: 1;
+        img[alt="card front"] {
+          width: 15em;
+        }
+
+        .cardDetailsWrapper {
+          & > div {
+            padding: 0em;
+          }
+
+          .cardLogo {
+            padding: 0.5em 0em 0em 1em;
+            img[alt="card logo"] {
+              width: 3em;
+            }
+          }
+
+          .cardDetails {
+            @include flexItem(column, space-around, none);
+          }
+
+          .cardNumber {
+            font-size: 1rem;
+            padding: 0em 0em 0em 0;
+            text-align: center;
+            letter-spacing: 3px;
+          }
+
+          .cardBottom {
+            justify-content: space-between;
+            font-size: 0.5rem;
+            padding: 0em 2.5em 0em 2.5em;
+          }
+
+          .cardExDate {
+            text-align: right;
+          }
+        }
+      }
+    }
   }
 
-  .cardBackImg {
-    position: relative;
-    width:447px;
-  
+  .cardBack {
+    order: 2;
+    .cardBackImg {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
 
-    .cvc{
-      position: absolute;
-      right: 13%;
-      top: 45%;
-      font-size: 0.9rem;
-      color: $white;
+      .cvc {
+        position: absolute;
+        top: 110px;
+        right: 55px;
+        color: $white;
+      }
     }
+
+    @include mobile {
+      order: 1;
+      .cardBackImg {
+        justify-content: flex-end;
+        padding: 20px;
+        img[alt="card back"] {
+          width: 15em;
+        }
+        .cvc {
+          top: 85px;
+          right: 55px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    gap: 0;
+    margin-bottom: 5em;
   }
 }

@@ -8,3 +8,10 @@ body {
   background-image: url("./images/bg-main-desktop.png");
   background-repeat: no-repeat;
 }/*# sourceMappingURL=index.css.map */
+
+@media (max-width: 1050px) {
+  body{
+    background-color: black;
+    background-image: url("./images/bg-main-mobile.png");
+  }
+}

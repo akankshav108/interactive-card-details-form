@@ -2,20 +2,41 @@
 @import "./scss/variables";
 @import "./scss/flexItem";
 @import "./scss/fonts";
+@import "./scss/responsive";
 
-.main{
-    @include flexItem(row,space-evenly,2.5em);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    font-family: 'Space Grotesk', sans-serif;
+body {
+  background-image: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
 
+  @include mobile {
+    background-image: url("./images/bg-main-mobile.png");
+    background-repeat: repeat-x;
+  }
+}
 
-    & > div{
-       width: 50%;
-    //    background-color: aqua;
-    }
+.main {
+  @include flexItem(row, space-evenly, 2.5em);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  font-family: "Space Grotesk", sans-serif;
 
+  & > div {
+    width: 50%;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+    transform: none;
+
+    & > div {
+        width: 100%;
+      }
+  }
 }

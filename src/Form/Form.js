@@ -15,17 +15,24 @@ const Form = (props) => {
   };
 
 
-  const onSubmitHandler = (event) => {
+  const onSubmitHandler = async(event) => {
     event.preventDefault();
-    setWarning(validateValues(formValues));
-    props.onAddCard(formValues);
 
-    console.log(formValues)
-    console.log(warning)
+    console.log(formValues);
+    var localWarning = await validateValues(formValues);
+    setWarning(localWarning)
+
+    if(Object.keys(localWarning).length === 0){
+      props.onAddCard(formValues,false)
+    }
+
+    else{
+      props.onAddCard(formValues,true)
+    }
 
   };
 
-  const validateValues = (value) => {
+  const validateValues = async(value) => {
     const errors = {};
 
     if (!value.name) {
@@ -154,3 +161,4 @@ const Form = (props) => {
 };
 
 export default Form;
+

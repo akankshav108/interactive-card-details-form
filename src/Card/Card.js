@@ -18,7 +18,7 @@ const Card = (props) => {
 
   return (
     <div className={Styles.cardsWarapper}>
-      <div>
+      <div className={Styles.cardFront}>
         <div className={Styles.cardWrapper}>
           <img src={cardFront} alt="card front" />
 
@@ -44,9 +44,9 @@ const Card = (props) => {
         </div>
       </div>
 
-      <div>
+      <div className={Styles.cardBack}>
         <div className={Styles.cardBackImg}>
-          <img src={cardBack} alt="card Back" />
+          <img src={cardBack} alt="card back" />
           <div className={Styles.cvc}>{props.cardData.cvc || '000'}</div>
         </div>
       </div>
