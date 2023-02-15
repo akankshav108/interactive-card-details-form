@@ -36,8 +36,8 @@ Users should be able to:
 ![Screenshot - mobile](./public/ss-mobile.png)
 ### Links
 
-- Solution URL: [solution URL](https://github.com/akankshav108/expenses-chart-component)
-- Live Site URL: [live site URL](https://akankshav108.github.io/expenses-chart-component/)
+- Solution URL: [solution URL](https://github.com/akankshav108/interactive-card-details-form)
+- Live Site URL: [live site URL](https://akankshav108.github.io/interactive-card-details-form/)
 
 ## My process
 
@@ -45,17 +45,16 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- Mobile-first workflow
+- SCSS
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
 - Basics of React Js
 - Passing data between the components
-- CSS Module
-- How to make custom UI compenents, like Card layout.
-- Using Jason data to dynamically size the bars on the chart
+- SCSS 
+- Responsiveness with SCSS
+- Form Validation
 
 ## Author
 
